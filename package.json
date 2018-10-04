@@ -1,0 +1,96 @@
+{
+  "name": "mc2-office",
+  "version": "2.11.0",
+  "description": "A MEDIACEPT Technology creation",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ram-you/mc2-office.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ramzi Youssef",
+    "email": "contact@mediacept.com"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:all": "electron-builder -wl",
+    "build:dir": "electron-builder --dir",
+    "build:linux": "electron-builder --linux",
+    "build:win": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^2.0.10",
+    "electron-builder": "^20.28.4"
+  },
+  "build": {
+    "asar": true,
+    "asarUnpack": [
+      "./"
+    ],
+    "productName": "MC2-Office",
+    "appId": "com.mediacept.mc2-office",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "copyright": "Copyright © 2018 MEDIACEPT Technology",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false,
+      "displayLanguageSelector": true,
+      "installerLanguages": [
+        "fr_FR",
+        "en_US"
+      ]
+    },
+    "linux": {
+      "category": "Office",
+      "artifactName": "${productName}-${version}.${ext}",
+      "target": [
+        {
+          "target": "deb",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "synopsis": "MEDIACEPT Office 2",
+      "description": "A full desktop office application developed by MEDIACEPT Technology",
+      "desktop": {
+        "Name": "MC2-Office",
+        "Comment": "MEDIACEPT Office 2",
+        "Categories": "Office, Desktop"
+      }
+    },
+    "appImage": {
+      "systemIntegration": "doNotAsk",
+      "synopsis": "MEDIACEPT Office 2",
+      "description": "A full desktop office application developed by MEDIACEPT Technology",
+      "desktop": {
+        "Name": "MC2-Office",
+        "Comment": "MEDIACEPT Office 2",
+        "Categories": "Office, Desktop"
+      }
+    },
+    "deb": {
+      "synopsis": "MEDIACEPT Office 2"
+    }
+  }
+}
