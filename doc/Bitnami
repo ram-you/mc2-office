@@ -1,0 +1,9 @@
+cd /tmp
+
+sudo wget https://downloads.bitnami.com/files/stacks/odoo/11.0.20180918-0/bitnami-odoo-11.0.20180918-0-linux-x64-installer.run
+
+sudo chmod 755 bitnami-odoo-11.0.20180918-0-linux-x64-installer.run
+
+sudo chmod +x bitnami-odoo-11.0.20180918-0-linux-x64-installer.run
+
+./bitnami-odoo-11.0.20180918-0-linux-x64-installer.run
