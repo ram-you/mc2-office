@@ -1,41 +1,134 @@
 {
-  "name": "mc2-office",
-  "version": "2.11.0",
+  "name": "mc-office",
+  "version": "0.3.61",
   "description": "A MEDIACEPT Technology creation",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ram-you/mc2-office.git"
+    "url": "git+https://github.com/ram-you/mc-office.git"
   },
   "license": "MIT",
   "author": {
     "name": "Ramzi Youssef",
     "email": "contact@mediacept.com"
   },
-  "main": "main.js",
+  "main": "./dist/electron/main.js",
   "scripts": {
-    "start": "electron .",
-    "build": "electron-builder",
-    "build:all": "electron-builder -wl",
-    "build:dir": "electron-builder --dir",
-    "build:linux": "electron-builder --linux",
-    "build:win": "electron-builder --win"
+    "build": "npm run pack && electron-builder",
+    "build:all": "npm run pack && electron-builder -wl",
+    "build:dir": "npm run pack && electron-builder --dir",
+    "build:linux": "npm run pack && electron-builder --linux",
+    "build:win": "npm run pack && electron-builder --win",
+    "clean": "cross-env BUILD_TARGET=clean node vue-electron/build.js",
+    "dev": "cross-env NODE_ENV=development ELECTRON_DISABLE_SECURITY_WARNINGS=true node vue-electron/dev-runner.js",
+    "postinstall": "electron-builder install-app-deps && npm rebuild node-sass",
+    "pack": "npm run clean && npm version patch --no-git-tag-version && cross-env NODE_ENV=production npm run pack:main && npm run pack:renderer",
+    "pack:main": "webpack  --mode production --hide-modules --config vue-electron/webpack.main.config.js",
+    "pack:renderer": "webpack --mode production --hide-modules --config vue-electron/webpack.renderer.config.js",
+    "rebuild": "electron-rebuild -f -w sqlite3",
+    "rebuild-electron": "./node_modules/.bin/electron-rebuild",
+    "release": "build"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
+    "@mdi/font": "^2.8.94",
+    "animejs": "^2.2.0",
+    "axios": "^0.18.0",
+    "chart.js": "^2.7.2",
+    "crypto-js": "^3.1.9-1",
+    "date-fns": "^1.29.0",
+    "electron-is-dev": "^1.0.1",
+    "electron-pdf-window": "^1.0.12",
+    "electron-store": "^2.0.0",
+    "file-saver": "^2.0.0-rc.3",
+    "fs-extra": "^7.0.0",
+    "got": "^9.2.2",
+    "handlebars": "^4.0.12",
+    "jquery": "^3.3.1",
+    "knex": "^0.15.2",
+    "lodash-es": "^4.17.11",
+    "nedb": "^1.8.0",
+    "pdf-lib": "^0.3.0",
+    "popper.js": "^1.14.4",
+    "sqlite3": "^4.0.2",
+    "vue": "^2.5.17",
+    "vue-chartjs": "^3.4.0",
+    "vue-i18n": "^8.1.0",
+    "vue-router": "^3.0.1",
+    "vue-swatches": "^1.0.2",
+    "vuetify": "^1.2.6",
+    "vuex": "^3.0.1",
+    "xlsx": "^0.14.0"
   },
   "devDependencies": {
-    "electron": "^2.0.10",
-    "electron-builder": "^20.28.4"
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.1.2",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-imports": "^1.5.1",
+    "babel-preset-minify": "^0.4.3",
+    "copy-webpack-plugin": "^4.5.2",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "del": "^3.0.0",
+    "devtron": "^1.4.0",
+    "electron": "^2.0.11",
+    "electron-builder": "^20.28.4",
+    "electron-debug": "^2.0.0",
+    "electron-rebuild": "^1.8.2",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "inject-loader": "^4.0.1",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "multispinner": "^0.2.1",
+    "node-loader": "^0.6.0",
+    "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "script-ext-html-webpack-plugin": "^2.0.1",
+    "style-loader": "^0.23.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.1",
+    "vue-devtools": "^4.1.4",
+    "vue-electron": "^1.0.6",
+    "vue-loader": "^15.4.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.5.17",
+    "vue2-ace-editor": "0.0.11",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-hot-middleware": "^2.24.2"
   },
   "build": {
     "asar": true,
     "asarUnpack": [
       "./"
     ],
-    "productName": "MC2-Office",
-    "appId": "com.mediacept.mc2-office",
+    "productName": "MC-Office",
+    "appId": "com.mediacept.mc-office",
     "directories": {
       "output": "dist_electron"
     },
+    "extraResources": [
+      {
+        "from": "./src/common/locales",
+        "to": "locales"
+      },
+      {
+        "from": "./src/common/assets",
+        "to": "assets"
+      }
+    ],
     "copyright": "Copyright © 2018 MEDIACEPT Technology",
     "win": {
+      "icon": "./src/common/assets/icons/icon.ico",
       "target": [
         {
           "target": "nsis",
@@ -55,6 +148,7 @@
       ]
     },
     "linux": {
+      "icon": "./src/common/assets/icons",
       "category": "Office",
       "artifactName": "${productName}-${version}.${ext}",
       "target": [
@@ -71,26 +165,29 @@
           ]
         }
       ],
-      "synopsis": "MEDIACEPT Office 2",
+      "synopsis": "MEDIACEPT Office",
       "description": "A full desktop office application developed by MEDIACEPT Technology",
       "desktop": {
-        "Name": "MC2-Office",
-        "Comment": "MEDIACEPT Office 2",
+        "Name": "MC-Office",
+        "Comment": "MEDIACEPT Office",
         "Categories": "Office, Desktop"
       }
     },
     "appImage": {
       "systemIntegration": "doNotAsk",
-      "synopsis": "MEDIACEPT Office 2",
+      "synopsis": "MEDIACEPT Office",
       "description": "A full desktop office application developed by MEDIACEPT Technology",
       "desktop": {
-        "Name": "MC2-Office",
-        "Comment": "MEDIACEPT Office 2",
+        "Name": "MC-Office",
+        "Comment": "MEDIACEPT Office",
         "Categories": "Office, Desktop"
       }
     },
     "deb": {
-      "synopsis": "MEDIACEPT Office 2"
+      "synopsis": "MEDIACEPT Office",
+      "afterInstall": "./scripts/debian-add-repo.sh",
+      "afterRemove": "./scripts/debian-uninstaller.sh"
     }
-  }
+  },
+  "db_version": "0.0.3"
 }

@@ -1,0 +1,47 @@
+  <div class="table-responsive">
+  
+  <table class="table   table-hover">
+  <thead>
+    <tr>
+      <th>
+        <span class="custom-checkbox">
+          <input type="checkbox" id="selectAll">
+          <label for="selectAll"></label>
+        </span>
+      </th>
+      {{#each dbTableDefinition}}
+      <th>{{this}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each dbTableData}}
+    <tr>
+      <td>
+        <span class="custom-checkbox">
+          <input type="checkbox" id="checkbox1" name="options[]" value="1">
+          <label for="checkbox1"></label>
+        </span>
+      </td>
+
+
+
+      {{#eachProperty this}}
+      {{!-- {{property}}-{{value}} --}}
+      <td>  {{value}}</td>
+      {{/eachProperty }}
+
+      <td>
+        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="mdi mdi-pencil" data-toggle="tooltip"
+            title="Edit"></i></a>
+        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="mdi mdi-delete" data-toggle="tooltip"
+            title="Delete"></i></a>
+      </td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>
+
+
+</div>

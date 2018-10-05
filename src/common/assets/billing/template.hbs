@@ -1,0 +1,100 @@
+<div class="billing-container">
+
+  <div class="clearfix header" style="padding: 0 0 20px;">
+    <div id="logo">
+      <img src="{{logo}}">
+    </div>
+    <div id="company">
+      <h2 class="name">MEDIACEPT Technology</h2>
+      <div>Boulevard des Palmiers, Sousse-Khézama, Sousse</div>
+      <div>+216 73 274 987</div>
+      <div>
+        <a href="mailto:contact@mediacept.com">contact@mediacept.com</a>
+      </div>
+    </div>
+
+  </div>
+  <div style="padding: 0 0 0px;  padding-bottom: 40px; ">
+
+    <div id="details" class="clearfix">
+      <div id="client">
+        <div class="to">INVOICE TO:</div>
+        <h2 class="name">{{invoice.client.name}}</h2>
+        <div class="address">{{invoice.client.address1}} {{invoice.client.address2}} {{invoice.client.city}}
+          {{invoice.client.state}}
+          {{invoice.client.postal_code}}
+        </div>
+        <div class="email">
+          <a :href="'mailto:'+invoice.client.contact.email">{{invoice.client.contact.email}}</a>
+        </div>
+      </div>
+      <div id="invoice">
+        <h1>INVOICE {{invoice.invoice_number}}</h1>
+        <div class="date">Date of Invoice: {{invoice.invoice_date}}</div>
+        <div class="date">Due Date: {{invoice.due_date}}</div>
+      </div>
+    </div>
+    <table border="0" cellspacing="0" cellpadding="0" style="padding-bottom: 40px;">
+      <!-- === -->
+      <thead>
+
+        <tr>
+          <th class="no">#</th>
+          <th class="item">ARTICLE</th>
+          <th class="desc">DESCRIPTION</th>
+          <th class="unit">UNIT PRICE</th>
+          <th class="qty">QUANTITY</th>
+          <th class="total">TOTAL</th>
+        </tr>
+
+      </thead>
+      <!-- === -->
+      <tbody>
+        {{#each invoice.invoice_items}}
+        <tr>
+          <td class="no">{{inc @index}}</td>
+          <td class="item"> {{item}}</td>
+          <td class="desc"> {{description}}</td>
+          <td class="unit">{{unit_cost}}</td>
+          <td class="qty">{{quantity}}</td>
+          <td class="total">{{line_total}}</td>
+
+        </tr>
+        {{/each}}
+      </tbody>
+
+      <!-- === -->
+      <tfoot>
+        <tr>
+          <td colspan="3"></td>
+          <td colspan="2">SUBTOTAL</td>
+          <td>{{invoice.totals.subtotal}}</td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td colspan="2">TAX 25%</td>
+          <td>$1,300.00</td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td colspan="2">GRAND TOTAL</td>
+          <td>{{invoice.totals.total}}</td>
+        </tr>
+      </tfoot>
+      <!-- === -->
+
+    </table>
+
+    <div id="thanks">Thank you!</div>
+    <div id="notices">
+      <div>NOTICE:</div>
+      <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+    </div>
+  </div>
+  <footer>
+    Invoice was created on a computer and is valid without the signature and seal.
+  </footer>
+
+
+
+</div>

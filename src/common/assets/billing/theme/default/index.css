@@ -1,0 +1,252 @@
+@font-face {
+  font-family: "invoiceFont";
+  src: url('SourceSansPro-Regular.ttf');
+}
+
+
+
+body {
+  page-break-before: always;
+}
+ 
+table {
+  page-break-before: avoid;
+}
+
+.billing-container,
+.billing-container * {
+  font-family: "invoiceFont" !important;
+}
+
+.billing-container .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.billing-container a {
+  color: #0087C3;
+  text-decoration: none;
+}
+
+.billing-container {
+  position: relative;
+  width: 21cm;
+  /* height: 29.7cm;  */
+  margin: 0 auto;
+  color: rgb(74, 74, 74);
+  background: #FFFFFF;
+  font-size: 14px;
+  text-align: initial;
+
+}
+
+
+.billing-container .header {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #AAAAAA;
+}
+
+.billing-container #logo {
+  float: left;
+  margin-top: 8px;
+}
+
+.billing-container #logo img {
+  height: 70px;
+}
+
+.billing-container #company {
+  float: right;
+  text-align: right;
+}
+
+
+.billing-container #details {
+  margin-bottom: 50px;
+}
+
+.billing-container #client {
+  padding-left: 6px;
+  border-left: 6px solid #0087C3;
+  float: left;
+}
+
+.billing-container #client .to {
+  color: #777777;
+}
+
+.billing-container h2.name {
+  font-size: 1.4em;
+  font-weight: normal;
+  margin: 0;
+}
+
+.billing-container #invoice {
+  float: right;
+  text-align: right;
+}
+
+.billing-container #invoice h1 {
+  color: #0087C3;
+  font-size: 2.4em;
+  line-height: 1em;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+}
+
+.billing-container #invoice .date {
+  font-size: 1.1em;
+  color: #777777;
+}
+
+.billing-container table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px;
+}
+
+@media print {
+  table tbody tr td:before,
+  table tbody tr td:after {
+    content: "";
+    height: 4px;
+    display: block;
+  }
+}
+
+.billing-container table th,
+.billing-container table td {
+  padding: 20px;
+  background: #EEEEEE;
+  text-align: center;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.billing-container table th {
+  white-space: nowrap;
+  font-weight: normal;
+}
+
+.billing-container table td {
+  text-align: right;
+}
+
+.billing-container table td h3 {
+  color: #57B223;
+  font-size: 1.2em;
+  font-weight: normal;
+  margin: 0 0 0.2em 0;
+}
+
+.billing-container table .no {
+  color: #FFFFFF;
+  font-size: 1.6em;
+  background: #57B223;
+  width: 10%;
+}
+
+.billing-container table .item {
+  text-align: left;
+  background: #DDDDDD;
+}
+
+.billing-container table .desc {
+  text-align: left;
+  width: 50%;
+}
+
+.billing-container table .unit {
+  background: #DDDDDD;
+}
+
+/* table .qty {
+} */
+
+.billing-container table .total {
+  background: #57B223;
+  color: #FFFFFF;
+}
+
+.billing-container table td.unit,
+.billing-container table td.qty,
+.billing-container table td.total {
+  font-size: 1.2em;
+}
+
+.billing-container table tbody tr:last-child td {
+  border: none;
+}
+
+.billing-container table tfoot td {
+  padding: 10px 20px;
+  background: #FFFFFF;
+  border-bottom: none;
+  font-size: 1.2em;
+  white-space: nowrap;
+  border-top: 1px solid #AAAAAA;
+}
+
+.billing-container table tfoot tr:first-child td {
+  border-top: none;
+}
+
+.billing-container table tfoot tr:last-child td {
+  color: #57B223;
+  font-size: 1.4em;
+  border-top: 1px solid #57B223;
+
+}
+
+.billing-container table tfoot tr td:first-child {
+  border: none;
+}
+
+.billing-container #thanks {
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+
+.billing-container #notices {
+  padding-left: 6px;
+  border-left: 6px solid #0087C3;
+}
+
+.billing-container #notices .notice {
+  font-size: 1.2em;
+}
+
+.billing-container footer {
+  color: #777777;
+  width: 100%;
+  /* height: 30px; */
+  /* position: fixed; */
+  bottom: 0;
+  border-top: 1px solid #AAAAAA;
+  padding: 8px 0;
+  text-align: center;
+
+
+}
+
+@media print{
+  .billing-container footer {
+    position: fixed;
+  }
+}
+
+
+ 
+ 
+
+ 
+ 
+
+
+
+
+
+
+

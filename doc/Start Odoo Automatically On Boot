@@ -1,0 +1,26 @@
+sudo cp /opt/odoo/ctlscript.sh /etc/init.d/odoo
+
+sudo chmod +x /etc/init.d/odoo
+
+sudo update-rc.d -f odoo defaults
+sudo update-rc.d -f odoo enable
+
+sudo pico  /etc/init.d/odoo
+
+Add  the following lines at the beginning of the /etc/init.d/odoo
+
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          odoo
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog  
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: odoo
+# Description:       odoo
+### END INIT INFO
+
+ 
+
+
+ sudo service odoo start

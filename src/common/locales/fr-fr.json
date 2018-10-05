@@ -1,0 +1,59 @@
+{
+  "MEDIACEPT Office": "MEDIACEPT Office",
+  "File": "Fichier",
+  "Home": "Accueil",
+  "Restart": "Redémarrer",
+
+
+
+  "Edit": "Editer",
+  "Undo": "Annuler",
+  "Redo": "Refaire",
+  "Cut": "Couper",
+  "Copy": "Copier",
+  "Paste": "Coller",
+  "Delete": "Supprimer",
+  "Select all": "Sélectionner tout",
+  "View": "Voir",
+ 
+  "New": "Nouveau",
+  "Save": "Enregistrer",
+  "Reset": "Réinitialiser",
+  "Add Item": "Ajouter un article",
+  "Toggle": "Changer",
+  "Toggle Form Settings": "Changer Paramètres du formulaire",
+  "Toggle Due Date": "Changer la date d'échéance",
+  "Toggle Currency": "Changer la monnaie",
+  "Toggle VAT": "Changer la TVA",
+  "Toggle Discount": "Changer la Remise",
+  "Toggle Note": "Changer le commentaire",
+
+
+
+  "Actual size": "Taille actuelle",
+  "Zoom in": "Zoom avant",
+  "Zoom out": "Zoom arrière",
+  "Toggle fullscreen": "Plein écran",
+  "Window": "Fenêtre",
+  "Minimize": "Minimiser",
+  "Close": "Fermer",
+  "Help": "Aide",
+  "Learn more": "Voir plus",
+  "About": "À propos de",
+  "Services": "Services",
+  "Hide": "Cacher",
+  "Hide others": "Cacher les autres",
+  "Unhide": "Monter",
+  "Quit": "Quitter",
+  "Zoom": "Zoom",
+  "Bring all to front": "Mettre tout en avant",
+  "Welcome": "Bienvenue",
+
+  "Reload": "Recharger",
+  "Go to": "Aller à",
+  "Settings": "Paramètres",
+  "Dev tools": "Outils de développement",
+  "Invoice": "Facture",
+  "Invoices": "Factures",
+  "Contacts": "Contacts"
+}

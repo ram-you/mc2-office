@@ -1,0 +1,59 @@
+{
+  "MEDIACEPT Office": "ميدياسبت أوفيس",
+  "File": "ملف",
+  "Home": "الصفحة الرئيسية",
+  "Restart":"اعادة تشغيل",
+
+
+  "Edit": "تحرير",
+  "Undo": "تراجع عن",
+  "Redo": "إعادة",
+  "Cut": "قطع",
+  "Copy": "نسخ",
+  "Paste": "لصق",
+  "Delete": "حذف",
+  "Select all": "اختر الكل",
+  "View": "عرض",
+ 
+  "New": "جديد",
+  "Save": "احفظ",
+  "Reset": "إعادة تعيين",
+  "Add Item": "اضافة عنصر",
+  "Toggle": "تبديل",
+  "Toggle Form Settings": "تبديل إعدادات النموذج",
+  "Toggle Due Date": "تبديل تاريخ الاستحقاق",
+  "Toggle Currency": "تبديل العملة",
+  "Toggle VAT": "تبديل ضريبة القيمة المضافة",
+  "Toggle Discount": "تبديل الخصم",
+  "Toggle Note": "تبديل الملاحظة",
+
+
+
+
+  "Actual size": "Actual size",
+  "Zoom in": "تكبير",
+  "Zoom out": "تصغير",
+  "Toggle fullscreen": "كامل الشاشة",
+  "Window": "نافذة",
+  "Minimize": "تصغير",
+  "Close": "إغلاق",
+  "Help": "مساعدة",
+  "Learn more": "Learn more",
+  "About": "بشأن",
+  "Services": "Services",
+  "Hide": "إخفاء",
+  "Hide others": "Hide others",
+  "Unhide": "Unhide",
+  "Quit": "قم بإنهاء التطبيق",
+  "Zoom": "التكبير والتصغير",
+  "Bring all to front": "Bring all to front",
+  "Welcome": "مرحبا",
+
+  "Reload": "إعادة تحميل",
+  "Go to": "اذهب إلى",
+  "Settings": "الضبط",
+  "Dev tools": "أدوات التطوير",
+  "Invoice": "فاتورة",
+  "Invoices": "الفواتير",
+  "Contacts": "جهات الاتصال"
+}

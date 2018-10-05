@@ -1,0 +1,32 @@
+{
+  "app": {
+    "Title": "MC Office",
+    "Title_Long": "MEDIACEPT Office",
+    "Home": "Home",
+    "About": "About MC Office",
+    "Application_Locale":"Application Locale",
+    "Arab": "Arab",
+    "English": "English",
+    "French": "French",
+    "Login": "Login",
+    "Logout": "Logout",
+    "Sign_In": "Sign In",
+    "Ok":"Ok",
+    "Cancel": "Cancel",
+    "Username": "Username",
+    "Password": "Password",
+    "Username_is_required": "Username is required",
+    "Enter_username": "Enter username",
+    "Password_is_required": "Password is required",
+    "Enter_password": "Enter password",
+    "Remember_me": "Remember me",
+    "Search":"Search",
+    "Color_theme":"Color Theme",
+    "dark":"Dark (black)",
+    "light":"Light (white)",
+    "Restart":"Restart",
+    "Later": "Later",
+    "Restart_message":   "You must restart the application for the changes to take effect"
+   
+  }
+}

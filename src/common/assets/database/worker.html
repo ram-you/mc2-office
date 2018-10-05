@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/lists.css">
+</head>
+
+<body>
+  <section class="banner-area relative" id="home">
+    <div class="container">
+      <div class="row d-flex align-items-center justify-content-center" style=" padding: 64px 0;">
+        <div class="banner-content col-lg-12">
+          <h1>
+            <img style="vertical-align:middle;width:56px;height: 56px;" src="img/logo-64x64.png">
+            <span style="vertical-align:middle" class="text-success"> MEDIACEPT Office </span>
+          </h1>
+          <button class="btn btn-success" onclick="get_dbStatistics()">Refresh DB Statistics</button>
+        </div>
+        <div class="banner-content col-lg-6 col-md-12">
+          <div id="db-infos">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/header-img.png" alt="" style="width:100%">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script id="db-tables-template" type="text/x-handlebars-template">
+    <div class="single category p-3 my-5 bg-light rounded">
+			<h3 class="side-title">Database Version: <span class="text-primary"> {{version}}</span></h3>
+			<ul class="list-unstyled">
+					{{#each dbTables}}
+				<li class="px-2"><div>{{table_name}} <span class="float-right text-success">{{table_count}}</span></div></li> 
+				{{/each}}
+			</ul>
+		</div>
+	</script>
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    ["@babel/syntax-dynamic-import"],
+    ["@babel/transform-runtime", {
+ 
+    }],
+    [ 
+      "transform-imports",
+      {
+        "vuetify": {
+          "transform": "vuetify/es5/components/${member}",
+          "preventFullImport": true
+        }
+      }
+    ]
+  ],
+  "presets": [ 
+    [
+      "@babel/env"  
+    ],
+    
+    ["babel-preset-minify", {"evaluate":false}]
+  ]
+}
