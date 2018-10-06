@@ -1,9 +1,7 @@
+
 sudo cp /opt/odoo/ctlscript.sh /etc/init.d/odoo
 
-sudo chmod +x /etc/init.d/odoo
 
-sudo update-rc.d -f odoo defaults
-sudo update-rc.d -f odoo enable
 
 sudo pico  /etc/init.d/odoo
 
@@ -23,4 +21,19 @@ Add  the following lines at the beginning of the /etc/init.d/odoo
  
 
 
- sudo service odoo start
+sudo chmod +x /etc/init.d/odoo
+
+sudo update-rc.d -f odoo defaults
+sudo update-rc.d -f odoo enable
+
+
+sudo service odoo start
+
+
+##############################################################
+To remove the banner link to the Bitnami Info page, follow these steps:
+
+sudo /opt/odoo/apps/odoo/bnconfig --disable_banner 1
+
+Restart the Web server:
+sudo /opt/odoo/ctlscript.sh restart apache
