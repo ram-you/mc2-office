@@ -32,7 +32,7 @@
     "@fortawesome/fontawesome-free": "^5.3.1",
     "@mdi/font": "^2.8.94",
     "animejs": "^2.2.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "chart.js": "^2.7.2",
     "crypto-js": "^3.1.9-1",
     "date-fns": "^1.29.0",
